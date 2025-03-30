@@ -94,3 +94,34 @@ ggplot(filter(vert_res3_long_df, Taxon %in% top_10_taxa), aes(x = Timepoint, y =
   )
 
 ggsave("vert_res3_top10_taxa_over_time.svg", width = 8, height = 6, units = "in")
+
+# top 10 taxa in terms of read count with reads normalized within each taxon
+
+vert_res3_long_df_prop <- vert_res3_long_df %>%
+  group_by(Taxon) %>%
+  mutate(Proportion = Reads / sum(Reads, na.rm = TRUE)) %>%
+  ungroup()
+
+str(vert_res3_long_df_prop)
+
+ggplot(filter(vert_res3_long_df_prop, Taxon %in% top_10_taxa), 
+       aes(x = Timepoint, y = Proportion, color = Taxon, group = Taxon)) +
+  geom_line(size = 1) +
+  geom_point(size = 2) +
+  labs(
+    x = "Timepoint",
+    y = "Proportional of Reads per Taxon",
+    title = "Normalized Detection Over Time",
+    color = "Species"
+  ) +
+  scale_x_discrete(labels = 1:9) +
+  scale_color_brewer(palette = "Paired") +  # or manual palette if needed
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5),
+    axis.line = element_line(color = "black"),
+    axis.text = element_text(color = "black"),
+    axis.title = element_text(color = "black"),
+    legend.title = element_text(color = "black")
+  )
+
