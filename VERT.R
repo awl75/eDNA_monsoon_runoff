@@ -125,3 +125,4 @@ ggplot(filter(vert_res3_long_df_prop, Taxon %in% top_10_taxa),
     legend.title = element_text(color = "black")
   )
 
+ggsave("vert_res3_top10_taxa_over_time_proportions.svg", width = 8, height = 6, units = "in")
