@@ -1,0 +1,18 @@
+Groups	Phylum	Class	Order	Family	Genus	Species	Common Name	Q	Taxon	Sum	graph_group	MON-31Jul2023-1	MON-31Jul2023-2	MON-31Jul2023-3	MON-31Jul2023-4	MON-31Jul2023-5	MON-31Jul2023-6	MON-31Jul2023-7	MON-31Jul2023-8	MON-31Jul2023-9
+Chordates: Birds	Chordata	Aves	Columbiformes	Columbidae	Zenaida	Zenaida asiatica	white-winged dove	Y	Zenaida asiatica	3639620	1	884041	563125	246749	1288491	0	0	657214	0	0
+Chordates: Birds	Chordata	Aves	Columbiformes	Columbidae				mourning dove?	Unassigned Columbidae	1897430	2	432441	0	0	0	0	1464989	0	0	0
+Chordates: Birds	Chordata	Aves	Galliformes	Odontophoridae	Callipepla		Gambel's quail	Y	Callipepla sp.	450056	3	0	0	0	450056	0	0	0	0	0
+Chordates: Birds	Chordata	Aves	Galliformes	Phasianidae	Gallus	Gallus gallus	chicken	???	Gallus gallus	1953216	4	178539	360732	0	0	0	0	0	0	1413945
+Chordates: Birds	Chordata	Aves	Galliformes	Phasianidae	Meleagris	Meleagris gallopavo	turkey	???	Meleagris gallopavo	11	5	0	0	0	3	3	5	0	0	0
+Chordates: Birds	Chordata	Aves	Passeriformes					???	Unassigned Passeriformes	1471824	6	0	0	0	0	0	1471819	0	5	0
+Chordates: Birds	Chordata	Aves	Piciformes	Picidae	Melanerpes	Melanerpes carolinus	red-bellied woodpecker	gila wood-pecker	Melanerpes carolinus	848345	7	232277	616068	0	0	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Artiodactyla	Cervidae	Odocoileus	Odocoileus virginianus	white-tailed deer	mule deer?	Odocoileus virginianus	112553	8	0	0	0	0	0	0	0	0	112553
+Chordates: Mammals	Chordata	Mammalia	Artiodactyla	Tayassuidae	Pecari	Pecari tajacu	collared peccary	Y	Pecari tajacu	603645	9	0	603645	0	0	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Carnivora	Canidae	Canis		dog / coyote	mix of dog and coyote?	Canis sp.	10206257	10	528201	767474	2289165	1933665	2452999	1416035	401966	295301	121451
+Chordates: Mammals	Chordata	Mammalia	Carnivora	Canidae	Urocyon	Urocyon cinereoargenteus	gray fox	Y	Urocyon cinereoargenteus	378660	11	378660	0	0	0	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Carnivora	Felidae				bobcat?	Unassigned Felidae	1226424	12	1226424	0	0	0	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Rodentia	Cricetidae	Neotoma	Neotoma albigula	white-throated woodrat	Y	Neotoma albigula	447591	13	0	0	0	447591	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Rodentia	Cricetidae	Peromyscus	Peromyscus eremicus	cactus mouse	Y	Peromyscus eremicus	304607	14	304607	0	0	0	0	0	0	0	0
+Chordates: Mammals	Chordata	Mammalia	Rodentia	Heteromyidae	Chaetodipus	Chaetodipus penicillatus	desert pocket mouse	Y	Chaetodipus penicillatus	771047	15	0	527161	243886	0	0	0	0	0	0
+Chordates: Reptiles	Chordata	Lepidosauria	Squamata	Teiidae	Aspidoscelis	Aspidoscelis marmoratus	marbled whiptail lizard	zebra-tail?	Aspidoscelis marmoratus	170	16	0	0	13	157	0	0	0	0	0
+Chordates: Reptiles	Chordata	Testudines	Testudines	Testudinidae	Gopherus	Gopherus agassizii	desert tortoise	Y	Gopherus agassizii	1664427	17	0	0	0	0	0	0	309956	1354471	0

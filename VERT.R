@@ -29,13 +29,13 @@ vert_res3_long_df <- vert_res3 %>%
   )
 
 # top 5 taxa in terms of read count
-top_taxa <- vert_res3_long_df %>%
+top_5_taxa <- vert_res3_long_df %>%
   group_by(Taxon) %>%
   summarize(TotalReads = sum(Reads, na.rm = TRUE)) %>%
   top_n(5, TotalReads) %>%
   pull(Taxon)
 
-ggplot(filter(vert_res3_long_df, Taxon %in% top_taxa), aes(x = Timepoint, y = Reads, color = Taxon, group = Taxon)) +
+ggplot(filter(vert_res3_long_df, Taxon %in% top_5_taxa), aes(x = Timepoint, y = Reads, color = Taxon, group = Taxon)) +
   geom_line(size = 1) +
   geom_point(size = 3) +
   labs(
@@ -58,3 +58,39 @@ ggplot(filter(vert_res3_long_df, Taxon %in% top_taxa), aes(x = Timepoint, y = Re
     panel.grid.major.x = element_blank(),
     axis.line = element_line(color = "black")
   )
+
+ggsave("vert_res3_top5_taxa_over_time.svg", width = 8, height = 6, units = "in")
+
+# top 10 taxa in terms of read count
+
+top_10_taxa <- vert_res3_long_df %>%
+  group_by(Taxon) %>%
+  summarize(TotalReads = sum(Reads, na.rm = TRUE)) %>%
+  slice_max(order_by = TotalReads, n = 10) %>%
+  pull(Taxon)
+
+ggplot(filter(vert_res3_long_df, Taxon %in% top_10_taxa), aes(x = Timepoint, y = Reads, color = Taxon, group = Taxon)) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  labs(
+    x = "Timepoint",
+    y = "eDNA Reads",
+    title = "Top 10 Taxa Over Time",
+    color = "Species"
+  ) +
+  scale_x_discrete(labels = 1:9) +
+  scale_color_brewer(palette = "Paired") +
+  theme_minimal(base_family = "sans") +
+  theme(
+    plot.title = element_text(hjust = 0.5, color = "black", face = "bold"),
+    axis.title = element_text(color = "black"),
+    axis.text = element_text(color = "black"),
+    legend.title = element_text(color = "black"),
+    legend.text = element_text(color = "black"),
+    panel.grid.major.y = element_line(color = "grey80"),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    axis.line = element_line(color = "black")
+  )
+
+ggsave("vert_res3_top10_taxa_over_time.svg", width = 8, height = 6, units = "in")
