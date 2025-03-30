@@ -126,3 +126,32 @@ ggplot(filter(vert_res3_long_df_prop, Taxon %in% top_10_taxa),
   )
 
 ggsave("vert_res3_top10_taxa_over_time_proportions.svg", width = 8, height = 6, units = "in")
+
+# "species richness" per sample across 9 samples
+
+vert_res3_species_richness <- vert_res3_long_df %>%
+  group_by(Timepoint) %>%
+  summarize(Richness = sum(Reads > 0, na.rm = TRUE))
+
+ggplot(vert_res3_species_richness, aes(x = Timepoint, y = Richness)) +
+  geom_col(fill = "grey40") +
+  labs(
+    title = "Species Richness per Timepoint",
+    x = "Timepoint",
+    y = "Number of Taxa Detected"
+  ) +
+  scale_x_discrete(labels = 1:9) +
+  theme_minimal(base_family = "sans") +
+  theme(
+    plot.title = element_text(size = 17, hjust = 0.5, color = "black", face = "bold"),
+    axis.title = element_text(size = 15, color = "black"),
+    axis.text = element_text(size = 13, color = "black"),
+    legend.title = element_text(color = "black"),
+    legend.text = element_text(color = "black"),
+    panel.grid.major.y = element_line(color = "grey80"),
+    panel.grid.minor.y = element_blank(),
+    panel.grid.major.x = element_blank(),
+    axis.line = element_line(color = "black")
+  )
+
+
