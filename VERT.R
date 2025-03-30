@@ -154,4 +154,5 @@ ggplot(vert_res3_species_richness, aes(x = Timepoint, y = Richness)) +
     axis.line = element_line(color = "black")
   )
 
+ggsave("vert_res3_species_richness_across_samples.svg", width = 8, height = 6, units = "in")
 
